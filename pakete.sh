@@ -4,7 +4,18 @@
 sudo apt update
 
 # --- Schritt 2: Die gewünschten Anwendungen installieren ---
-sudo apt install -y htop nvtop git curl tmux vim neovim vlc yt-dlp obs-studio qemu-system virt-manager
+sudo apt install -y htop nvtop git curl tmux vim neovim libreoffice vlc yt-dlp obs-studio qemu-system virt-manager
+
+# --- Schritt 3: Snap Anwendungen installieren ---
+sudo snap install brave discord
+sudo snap install code --classic
+
+# --- Schritt 4: Steam installieren ---
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install libnvidia-gl-575:i386
+
+sudo apt install steam-installer
 
 # --- Schritt 3: Erfolgsmeldung ---
 echo ""
