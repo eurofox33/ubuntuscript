@@ -6,3 +6,6 @@ sudo ufw enable
 
 # --- Schritt 3: Uhrzeit für Dual Boot konfigurieren. ---
 timedatectl set-local-rtc 1
+
+# --- Schritt 4: bin Ordner erstellen ---
+mkdir ~/.local/bin
