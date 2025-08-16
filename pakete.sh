@@ -17,11 +17,24 @@ sudo apt install libnvidia-gl-575:i386
 
 sudo apt install steam-installer
 
-# --- Schritt 3: Erfolgsmeldung ---
+# --- Schritt 5: pyenv installieren ---
+curl -fsSL https://pyenv.run | bash
+
+# Set up your shell environment for Pyenv
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
+
+# Install Python build dependencies
+sudo apt install make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl git \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+# --- Schritt 6: Erfolgsmeldung ---
 echo ""
 echo "Installation abgeschlossen! Alle Programme wurden erfolgreich installiert."
 
-# --- Schritt 4: Docker einrichten ---
+# --- Schritt 7: Docker einrichten ---
 
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -46,6 +59,6 @@ sudo groupadd docker
 # User in die Docker Gruppe
 sudo usermod -aG docker $USER
 
-# --- Schritt 5: Erfolgsmeldung ---
+# --- Schritt 8: Erfolgsmeldung ---
 echo ""
 echo "Installation abgeschlossen! Docker erfolgreich installiert."
