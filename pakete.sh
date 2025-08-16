@@ -30,11 +30,15 @@ sudo apt install make build-essential libssl-dev zlib1g-dev \
 libbz2-dev libreadline-dev libsqlite3-dev curl git \
 libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
-# --- Schritt 6: Erfolgsmeldung ---
+# --- Schritt 6: yt-dlp installieren ---
+curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp
+chmod +x ~/.local/bin/yt-dlp
+
+# --- Schritt 7: Erfolgsmeldung ---
 echo ""
 echo "Installation abgeschlossen! Alle Programme wurden erfolgreich installiert."
 
-# --- Schritt 7: Docker einrichten ---
+# --- Schritt 8: Docker einrichten ---
 
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -59,6 +63,6 @@ sudo groupadd docker
 # User in die Docker Gruppe
 sudo usermod -aG docker $USER
 
-# --- Schritt 8: Erfolgsmeldung ---
+# --- Schritt 9: Erfolgsmeldung ---
 echo ""
 echo "Installation abgeschlossen! Docker erfolgreich installiert."
