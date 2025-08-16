@@ -1,7 +1,13 @@
 # APT Pakete
 
-# --- Schritt 1: Paketlisten aktualisieren ---
-sudo apt update
+# --- Schritt 1: Erste Einrichtung ---
+sudo apt update && sudo apt upgrade -y && sudo snap refresh
+
+# UFW aktvieren
+sudo ufw enable
+
+# Uhrzeit für Dual Boot konfigurieren
+timedatectl set-local-rtc 1
 
 # --- Schritt 2: Die gewünschten Anwendungen installieren ---
 sudo apt install -y htop nvtop git curl tmux vim neovim libreoffice vlc yt-dlp obs-studio qemu-system virt-manager
