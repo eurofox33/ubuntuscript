@@ -41,10 +41,6 @@ mkdir ~/.local/bin
 curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp
 chmod +x ~/.local/bin/yt-dlp
 
-# --- Schritt 7: Erfolgsmeldung ---
-echo ""
-echo "Installation abgeschlossen! Alle Programme wurden erfolgreich installiert."
-
 # --- Schritt 8: Docker einrichten ---
 
 # Add Docker's official GPG key:
@@ -88,4 +84,4 @@ docker run -d -p 3000:8080 --gpus=all -v ollama:/root/.ollama -v open-webui:/app
 
 # --- Schritt 11: Erfolgsmeldung ---
 echo ""
-echo "Installation abgeschlossen! Docker erfolgreich installiert."
+echo "Installation abgeschlossen!"
