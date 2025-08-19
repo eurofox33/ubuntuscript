@@ -21,7 +21,7 @@ sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install libnvidia-gl-575:i386
 
-sudo apt install steam-installer
+sudo apt install -y steam-installer
 
 # --- Schritt 5: pyenv installieren ---
 curl -fsSL https://pyenv.run | bash
@@ -58,7 +58,7 @@ echo \
 sudo apt-get update
 
 # --- Docker Pakete installieren ---
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Docker Gruppe erstellen
 sudo groupadd docker
