@@ -19,7 +19,7 @@ sudo snap install code --classic
 # --- Schritt 4: Steam installieren ---
 sudo dpkg --add-architecture i386
 sudo apt update
-sudo apt install libnvidia-gl-575:i386
+sudo apt install -y libnvidia-gl-575:i386
 
 sudo apt install -y steam-installer
 
