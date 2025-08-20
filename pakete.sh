@@ -16,13 +16,6 @@ sudo apt install -y htop nvtop git curl tmux vim libreoffice vlc yt-dlp obs-stud
 sudo snap install brave discord
 sudo snap install code --classic
 
-# --- Schritt 4: Steam installieren ---
-sudo dpkg --add-architecture i386
-sudo apt update
-sudo apt install -y libnvidia-gl-575:i386
-
-sudo apt install -y steam-installer
-
 # --- Schritt 5: pyenv installieren ---
 curl -fsSL https://pyenv.run | bash
 
@@ -78,10 +71,3 @@ curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-contai
     
 sudo apt update
 sudo apt install -y nvidia-container-toolkit
-
-# --- Schritt 10: OpenWebUI und Ollama Docker Bundle ---
-docker run -d -p 3000:8080 --gpus=all -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama
-
-# --- Schritt 11: Erfolgsmeldung ---
-echo ""
-echo "Installation abgeschlossen!"
