@@ -1,5 +1,3 @@
-# APT Pakete
-
 # --- Schritt 1: Erste Einrichtung ---
 sudo apt update && sudo apt upgrade -y && sudo snap refresh
 
@@ -16,7 +14,7 @@ sudo apt install -y htop nvtop git curl tmux vim libreoffice vlc yt-dlp obs-stud
 sudo snap install brave discord
 sudo snap install code --classic
 
-# --- Schritt 5: pyenv installieren ---
+# --- Schritt 4: pyenv installieren ---
 curl -fsSL https://pyenv.run | bash
 
 # Set up your shell environment for Pyenv
@@ -29,12 +27,12 @@ sudo apt install -y make build-essential libssl-dev zlib1g-dev \
 libbz2-dev libreadline-dev libsqlite3-dev curl git \
 libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
-# --- Schritt 6: yt-dlp installieren ---
+# --- Schritt 5: yt-dlp installieren ---
 mkdir ~/.local/bin
 curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp
 chmod +x ~/.local/bin/yt-dlp
 
-# --- Schritt 8: Docker einrichten ---
+# --- Schritt 6: Docker einrichten ---
 
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -59,7 +57,6 @@ sudo groupadd docker
 # User in die Docker Gruppe
 sudo usermod -aG docker $USER
 
-# Docker userfähig machen
 newgrp docker
 
 # --- Schritt 9: NVIDIA Container Toolkit ---
