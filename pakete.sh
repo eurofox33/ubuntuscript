@@ -7,6 +7,15 @@ sudo ufw enable
 # Uhrzeit für Dual Boot konfigurieren
 timedatectl set-local-rtc 1
 
+# Dateichronik deaktivieren
+gsettings set org.gnome.desktop.privacy remember-recent-files false
+
+# Persönlichen Ordner anzeigen deaktivieren
+gsettings set org.gnome.shell.extensions.ding show-home false
+
+# Power Mode aktivieren
+gsettings set org.gnome.power-manager power-saver-profile 'performance' ???
+
 # --- Schritt 2: Die gewünschten Anwendungen installieren ---
 sudo apt install -y htop nvtop git curl tmux vim libreoffice vlc yt-dlp obs-studio qemu-system virt-manager
 
