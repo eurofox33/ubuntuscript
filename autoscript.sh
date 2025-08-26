@@ -14,6 +14,9 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Super>3
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 "['<Super>4']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Super>5']"
 
+# Persönlichen Ordner öffnen
+gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
+
 # Terminal öffnen
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Launch Terminal'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'gnome-terminal'
