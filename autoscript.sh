@@ -7,9 +7,6 @@ sudo ufw enable
 # Uhrzeit für Dual Boot konfigurieren
 timedatectl set-local-rtc 1
 
-# Ubuntu Dock Programme öffnen deaktivieren
-gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
-
 # --- Schritt 2: Die gewünschten Anwendungen installieren ---
 sudo apt install -y htop nvtop git curl tmux vim libreoffice vlc yt-dlp obs-studio qemu-system virt-manager
 
