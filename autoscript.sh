@@ -8,7 +8,7 @@ sudo ufw enable
 timedatectl set-local-rtc 1
 
 # --- Schritt 2: Die gewünschten Anwendungen installieren ---
-sudo apt install -y htop nvtop git curl tmux vim libreoffice vlc yt-dlp obs-studio qemu-system virt-manager
+sudo apt install -y htop nvtop git curl tmux vim python3-venv libreoffice vlc yt-dlp obs-studio qemu-system virt-manager
 
 # --- Schritt 3: Snap Anwendungen installieren ---
 sudo snap install brave discord
@@ -26,6 +26,18 @@ echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
 sudo apt install -y make build-essential libssl-dev zlib1g-dev \
 libbz2-dev libreadline-dev libsqlite3-dev curl git \
 libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+# Shell aktualisieren
+
+exec "$SHELL"
+
+# Python Versionen installieren
+
+pyenv install 3.13 3.12 3.11
+
+# Python Version global machen
+
+pyenv global 3.13
 
 # --- Schritt 5: yt-dlp installieren ---
 mkdir ~/.local/bin
