@@ -27,18 +27,6 @@ sudo apt install -y make build-essential libssl-dev zlib1g-dev \
 libbz2-dev libreadline-dev libsqlite3-dev curl git \
 libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
-# Shell aktualisieren
-
-exec "$SHELL"
-
-# Python Versionen installieren
-
-pyenv install 3.13 3.12 3.11
-
-# Python Version global machen
-
-pyenv global 3.13
-
 # --- Schritt 5: yt-dlp installieren ---
 mkdir ~/.local/bin
 curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ~/.local/bin/yt-dlp
