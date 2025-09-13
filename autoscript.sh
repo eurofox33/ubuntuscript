@@ -8,7 +8,7 @@ sudo ufw enable
 timedatectl set-local-rtc 1
 
 # --- Schritt 2: Die gewünschten Anwendungen installieren ---
-sudo apt install -y htop nvtop git curl tmux vim python3-venv libreoffice vlc yt-dlp obs-studio qemu-system virt-manager
+sudo apt install -y htop nvtop git curl vim python3-venv vlc yt-dlp
 
 # --- Schritt 3: Snap Anwendungen installieren ---
 sudo snap install brave discord
