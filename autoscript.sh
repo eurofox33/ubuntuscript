@@ -1,14 +1,18 @@
-# --- Schritt 1: Erste Einrichtung ---
-sudo apt update && sudo apt upgrade -y && sudo snap refresh
+#!/bin/bash
+
+set -e
 
 # UFW aktvieren
 sudo ufw enable
+
+# --- Schritt 1: Erste Einrichtung ---
+sudo apt update && sudo apt upgrade -y && sudo snap refresh
 
 # Uhrzeit für Dual Boot konfigurieren
 timedatectl set-local-rtc 1
 
 # --- Schritt 2: Die gewünschten Anwendungen installieren ---
-sudo apt install -y htop nvtop git curl vim python3-venv vlc yt-dlp
+sudo apt install -y htop nvtop git curl vim python3-venv vlc yt-dlp libreoffice obs-studio
 
 # --- Schritt 3: Snap Anwendungen installieren ---
 sudo snap install brave discord
@@ -26,12 +30,6 @@ echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
 sudo apt install -y make build-essential libssl-dev zlib1g-dev \
 libbz2-dev libreadline-dev libsqlite3-dev curl git \
 libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-
-source .bashrc
-
-pyenv install 3.13 3.12 3.11
-
-pyenv global 3.13
 
 # --- Schritt 5: yt-dlp installieren ---
 mkdir ~/.local/bin
@@ -62,3 +60,16 @@ sudo groupadd docker
 
 # User in die Docker Gruppe
 sudo usermod -aG docker $USER
+
+# Dynamische Workspaces deaktivieren, damit die Anzahl fix bleibt
+gsettings set org.gnome.mutter dynamic-workspaces false
+
+# Anzahl der virtuellen Desktops auf 5 setzen
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 5
+
+# ALT+1 bis ALT+5 zum Wechseln der virtuellen Desktops belegen
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Alt>1']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "['<Alt>2']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-3 "['<Alt>3']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-4 "['<Alt>4']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-5 "['<Alt>5']"
