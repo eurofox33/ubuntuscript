@@ -1,0 +1,10 @@
+# 1. Datei herunterladen.
+https://www.zotero.org/
+
+# 2. Datei entpacken, den Ordner darin in ~/.local/share/ verschieben.
+
+# 3. Desktop Launcher aktivieren:
+cd ~/.local/share/Zotero_App && ./set_launcher_icon
+
+# 4. Systemlink setzen:
+ln -s ~/.local/share/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
